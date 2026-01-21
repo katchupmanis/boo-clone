@@ -149,3 +149,12 @@ export const zodiacSigns = [
   { sign: 'Cancer', dateRange: 'Jun 21 - Jul 22' },
   { sign: 'Leo', dateRange: 'Jul 23 - Aug 22' },
 ];
+
+// Mock data for languages
+export const languages = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Spanish' },
+  { code: 'fr', name: 'French' },
+  { code: 'de', name: 'German' },
+  { code: 'zh', name: 'Chinese' },
+];
