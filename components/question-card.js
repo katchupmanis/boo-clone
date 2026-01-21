@@ -18,21 +18,15 @@ export default function QuestionCard({ question }) {
   
   return (
     <div className="card">
-      <div className="flex items-center justify-between mb-4">
-        <span className="inline-block text-black text-xs font-semibold px-3 py-1 rounded-full">
-          #{question.tag}
-        </span>
-        <span className="text-sm text-gray-500">{question.date}</span>
-      </div>
-      
-      <h2 className="text-xl font-semibold mb-6">
+      <h2 className="text-sm font-semibold mb-6 mt-0">
         Question of the Day
       </h2>
-      
-      <h1 className="text-2xl md:text-3xl font-bold mb-8">
-        {question.question}
-      </h1>
-      
+      <div className='flex'>
+        <h1 className="text-2xl md:text-3xl font-bold mb-8">
+          {question.question}
+        </h1>
+        <span className="text-sm text-gray-500">{question.date}</span>
+      </div>
       <div className="flex items-center gap-6 text-gray-400">
         <button 
           onClick={handleLike}

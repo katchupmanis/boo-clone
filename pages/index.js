@@ -6,7 +6,7 @@ import UniversesSidebar from '../components/universes-sidebar';
 import QuestionCard from '../components/question-card';
 import CommentCard from '../components/comment-card';
 import { posts, comments } from "../data/mockData";
-import { ChevronLeftIcon } from '@heroicons/react/24/outline';
+import { ChevronLeftIcon,PaperAirplaneIcon,PhotoIcon,GifIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
   const [commentText, setCommentText] = useState('');
@@ -26,36 +26,54 @@ export default function Home() {
         </div>
         
         {/* Main Content - Comment */}
-        <div className="lg:col-span-12 xl:col-span-6 overflow-y-auto">
-          {/* Back Button */}
-          <button className="flex items-center gap-2 text-gray-400 mb-4 hover:text-white">
-            <ChevronLeftIcon className="w-5 h-5" />
-            <span>Back</span>
-          </button>
+        <div className="lg:col-span-12 xl:col-span-6 overflow-y-auto px-3">
+          <div className="flex items-center justify-between mb-6 pt-2">
+            {/* Back Button */}
+            <button className="flex items-center gap-2 text-gray-400 hover:text-white glow rounded-2xl p-1">
+              <ChevronLeftIcon className="w-5 h-5" />
+            </button>
+            <span className="text-sm text-black bg-cyan-500 rounded-2xl px-3 py-1">#question</span>
+            <span>&nbsp;</span>
+          </div>
           
+
+
           {/* Question of the Day */}
           <QuestionCard question={posts[0]} />
 
           {/* Comment Input */}
           <div className="card mt-6">
             <form onSubmit={handleSubmitComment}>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-boo-cyan"></div>
+              <div className="block">
                 <input
                   type="text"
                   value={commentText}
                   onChange={(e) => setCommentText(e.target.value)}
                   placeholder="Comment"
-                  className="flex-1 bg-boo-dark rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-boo-cyan"
+                  className="w-full rounded-lg px-4 py-3 outline-none focus:ring-2 mb-4"
                 />
-                <button 
-                  type="submit"
-                  className="text-boo-cyan hover:text-boo-cyan-dark"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                  </svg>
-                </button>
+                <div className="flex justify-between">
+                  <div className="flex gap-2">
+                    <button 
+                      type="submit"
+                      className=""
+                    >
+                      <GifIcon className="w-8 h-8"/>
+                    </button>
+                    <button 
+                      type="submit"
+                      className=""
+                    >
+                      <PhotoIcon className="w-8 h-8"/>
+                    </button>
+                  </div>
+                  <button 
+                    type="submit"
+                    className=""
+                  >
+                    <PaperAirplaneIcon className="w-8 h-8"/>
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -65,7 +83,7 @@ export default function Home() {
             <select 
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-boo-dark border border-gray-700 rounded-lg px-4 py-2 outline-none focus:border-boo-cyan"
+              className=" border-gray-700 rounded-lg px-4 py-2 outline-none"
             >
               <option>Best - Today</option>
               <option>Best - This Week</option>
@@ -85,8 +103,18 @@ export default function Home() {
 
         {/* Right Sidebar - Related posts */}
         <div className="hidden xl:block xl:col-span-3 sticky top-20 self-start">
+          <div className="card mb-4">
+            <div className="w-full h-64 bg-linear-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+              <span className="text-gray-500">Image placeholder</span>
+            </div>
+            <button className="w-full mt-4 bg-cyan-500 text-black uppercase px-4 py-2 rounded-full hover:bg-cyan-600 transition-colors">
+              Activate Boo Infinity
+            </button>
+          </div>
+
+          <h3 className="font-semibold mb-4">Related Posts</h3>
+
           <div className="card">
-            <h3 className="font-semibold mb-4">Related Posts</h3>
             <div className="space-y-4">
               {posts.map((post) => (
                 <div key={post.id} className="pb-3 border-b border-gray-800 last:border-0">

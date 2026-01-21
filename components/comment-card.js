@@ -46,10 +46,10 @@ export default function CommentCard({ comment }) {
           
           {/* Badges */}
           <div className="flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center bg-blue-500/20 text-blue-400 text-xs px-2 py-1 rounded">
+            <span className="inline-flex items-center text-blue-400 text-xs px-2 py-1 rounded">
               🔵 {comment.user.personality}
             </span>
-            <span className="inline-flex items-center bg-purple-500/20 text-purple-400 text-xs px-2 py-1 rounded">
+            <span className="inline-flex items-center text-purple-400 text-xs px-2 py-1 rounded">
               ♒ {comment.user.zodiac}
             </span>
             <span className="text-xs text-gray-500">{comment.user.match}</span>
@@ -58,7 +58,7 @@ export default function CommentCard({ comment }) {
           {/* Award */}
           {comment.hasAward && (
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded bg-yellow-500/20 flex items-center justify-center">
+              <div className="w-6 h-6 rounded flex items-center justify-center">
                 🏆
               </div>
               <span className="text-xs text-yellow-500">1 Award</span>

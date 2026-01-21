@@ -25,5 +25,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .card {
-  @apply bg-white dark:bg-gray-900 shadow-md rounded-lg p-6;
+  @apply rounded-3xl p-6 border border-gray-900 bg-gray-950;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 8px;
+}
+.glow {
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 4px;
 }

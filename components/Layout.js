@@ -84,12 +84,12 @@ export default function Layout({ children }) {
                 href='{item.href}'
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-2 transition-colors ${
                   isActive(item.href)
-                    ? 'bg-boo-card text-boo-cyan'
-                    : 'text-gray-300 hover:bg-boo-card'
+                    ? 'text-cyan-500'
+                    : 'text-gray-300'
                 }`}
               >
                 <Icon className="w-5 h-5" />
-                <span>{item.name}</span>
+                <span className=''>{item.name}</span>
               </Link>
             );
           })}
