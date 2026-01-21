@@ -79,7 +79,7 @@ export const comments = [
     id: 1,
     user: {
       name: 'Phoebe',
-      avatar: 'https://i.pravatar.cc/40',
+      avatar: 'https://i.pravatar.cc/40?v=1',
       personality: 'INFJ',
       zodiac: 'Aquarius',
       match: '2 # 1'
@@ -94,13 +94,13 @@ export const comments = [
     id: 2,
     user: {
       name: 'Kostas',
-      avatar: 'https://i.pravatar.cc/40',
+      avatar: 'https://i.pravatar.cc/40?v=2',
       personality: 'ENFP',
       zodiac: 'Cancer',
       match: '9 # 1'
     },
     content: 'Y\'all getting dates and relationships?!',
-    image: 'https://placehold.co/400',
+    image: 'https://placehold.co/400?v=3',
     likes: 445,
     replies: 28,
     timeAgo: '2mo',
@@ -110,7 +110,7 @@ export const comments = [
     id: 3,
     user: {
       name: 'Sarah',
-      avatar: 'https://i.pravatar.cc/40',
+      avatar: 'https://i.pravatar.cc/40?v=3',
       personality: 'ENFJ',
       zodiac: 'Leo',
       match: '7 # 1'
